@@ -23,7 +23,7 @@ export class AuthGuard implements CanActivate {
   ): Observable<boolean | UrlTree > | Promise<boolean | UrlTree> | boolean | UrlTree {
     // esta funcion se ejecuta cuando se intenta acceder a una ruta protegida y no esta autenticado y redirige al login
     if (!this.TokenService.isAutorized()) {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/']);
       return false;
     } else {
       return true;
