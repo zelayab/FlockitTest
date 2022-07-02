@@ -1,0 +1,27 @@
+<div class="container">
+  <mat-toolbar color="warn">
+    <h1>Geo Buscador de Provincia</h1>
+    <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="20px">
+      <p>Back to Login</p>
+      <button mat-mini-fab color="basic" (click)="logout()" matTooltip="logout">
+        <mat-icon>logout</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
+  <div class='content'>
+    <mat-form-field fxLayoutAlign="center" color="warn">
+      <input matInput type="text" [ngModel]='textInput' (ngModelChange)="valueChange($event)" placeholder="Provincia">
+    </mat-form-field>
+    <div fxLayout="row wrap" fxLayoutGap="20px grid">
+      <div fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let item of provinces">
+        <mat-card class="mat-elevation-z4 card">
+          <mat-card-title fxLayoutAlign="center">{{item.nombre}}</mat-card-title>
+          <mat-card-content fxLayout="column" fxLayoutAlign="space-evenly center">
+            <p>Latitud: {{item.centroide.lat}}</p>
+            <p>Longitud: {{item.centroide.lon}}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  </div>
