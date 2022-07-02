@@ -14,6 +14,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## DEMO 
 `<link>` [Link](https://flockit-test-8fkuugn0x-zelayab.vercel.app/)
+- User: admin/admin
 
 
 #########################################################
